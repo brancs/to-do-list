@@ -1,0 +1,198 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+
+$primary-color: #FDCE00;
+$dark-color: #272727;
+$second-dark-color: #8F8A70;
+$border-color: #D5D3C9;
+$light-grey-color: #FAF9F8;
+$light-grey2-color: #EEEEEA;
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: $dark-color;
+  background: #FFEEA2;
+}
+
+body {
+  background-color: $light-grey-color;
+  accent-color: $primary-color;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.container {
+  width: 100%;
+  padding: 0 25vw;
+}
+
+.hero {
+  background-color: $primary-color;
+  padding: 36px 0;
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+button {
+  font-family: 'IBM Plex Mono', monospace;
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  line-height: 1rem;
+  .icon {
+    font-size: 1rem;
+    vertical-align: bottom;
+  }
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: $primary-color;
+  color: $dark-color;
+}
+
+button.primary:hover, button.primary:focus{
+  background-color: $second-dark-color;
+  color: $light-grey-color;
+}
+
+button.primary:active{
+  background-color: $dark-color;
+  color: $light-grey-color;
+}
+
+button.secondary {
+  background-color: #E2E1DA;
+  color: $dark-color;
+}
+
+button.secondary:hover, button.secondary:focus{
+  background-color: $second-dark-color;
+  color: $light-grey-color;
+}
+
+button.secondary:active{
+  background-color: $dark-color;
+  color: $light-grey-color;
+}
+
+button.delete {
+  background-color: #FFC4CE;
+  color: $dark-color;
+}
+
+button.delete:hover, button.delete:focus{
+  background-color: #FF718B;
+  color: $light-grey-color;
+}
+
+button.delete:active{
+  background-color: #DA0028;
+  color: $light-grey-color;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  label {
+    display: block;
+    margin-bottom: .5rem;
+  }
+  input[type='text']{
+    padding: .5rem 1rem;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+}
+
+.app {
+  font-size: 16px;
+  padding-block: 4rem;
+  .controls {
+    margin-bottom: 1rem;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      padding: 1rem .5rem;
+      border-bottom: 1px solid $border-color;
+      border-radius: 3px;
+      display: grid;
+      grid-template-columns: 1fr 150px;
+      align-items: center;
+      label {
+        font-weight: 600;
+        input[type='checkbox'] {
+          margin: 0;
+          margin-right: .5rem;
+          border: 1px solid $border-color;
+          border-radius: 3px;
+        }
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+      button {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+
+//Responsive
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20vw;
+  }
+}

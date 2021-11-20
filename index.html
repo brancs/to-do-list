@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do list</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="hero">
+    <div class="container">
+      <h1>To-do list</h1>
+    </div>
+  </section>
+  <section class="app container">
+    <div class="controls">
+      <div class="input-group">
+        <label for="to-do-title">New to-do</label>
+        <input type="text" name="" id="to-do-title" value="" placeholder="Ex.: Do something">
+        <button type="button" onclick="createNewToDo()" class="primary">Add <span class="icon material-icons">add</span></button>
+      </div>
+      <button type="button" onclick="saveActualToDoList()" class="secondary">Save list <span class="icon material-icons">save</span></button>
+      <button type="button" onclick="deleteActualToDoList()" class="secondary">Delete list <span class="icon material-icons">remove_circle</span></button>
+    </div>
+    <ul class="list-todos"></ul>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-moz-selection {
+  color: #272727;
+  background: #FFEEA2;
+}
+
+::selection {
+  color: #272727;
+  background: #FFEEA2;
+}
+
+body {
+  background-color: #FAF9F8;
+  accent-color: #FDCE00;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.container {
+  width: 100%;
+  padding: 0 25vw;
+}
+
+.hero {
+  background-color: #FDCE00;
+  padding: 36px 0;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+button {
+  font-family: 'IBM Plex Mono', monospace;
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  line-height: 1rem;
+}
+
+button .icon {
+  font-size: 1rem;
+  vertical-align: bottom;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: #FDCE00;
+  color: #272727;
+}
+
+button.primary:hover, button.primary:focus {
+  background-color: #8F8A70;
+  color: #FAF9F8;
+}
+
+button.primary:active {
+  background-color: #272727;
+  color: #FAF9F8;
+}
+
+button.secondary {
+  background-color: #E2E1DA;
+  color: #272727;
+}
+
+button.secondary:hover, button.secondary:focus {
+  background-color: #8F8A70;
+  color: #FAF9F8;
+}
+
+button.secondary:active {
+  background-color: #272727;
+  color: #FAF9F8;
+}
+
+button.delete {
+  background-color: #FFC4CE;
+  color: #272727;
+}
+
+button.delete:hover, button.delete:focus {
+  background-color: #FF718B;
+  color: #FAF9F8;
+}
+
+button.delete:active {
+  background-color: #DA0028;
+  color: #FAF9F8;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.input-group input[type='text'] {
+  padding: .5rem 1rem;
+  border: 1px solid #D5D3C9;
+  border-radius: 3px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.app {
+  font-size: 16px;
+  padding-block: 4rem;
+}
+
+.app .controls {
+  margin-bottom: 1rem;
+}
+
+.app ul {
+  list-style-type: none;
+}
+
+.app ul li {
+  padding: 1rem .5rem;
+  border-bottom: 1px solid #D5D3C9;
+  border-radius: 3px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 150px;
+      grid-template-columns: 1fr 150px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app ul li label {
+  font-weight: 600;
+}
+
+.app ul li label input[type='checkbox'] {
+  margin: 0;
+  margin-right: .5rem;
+  border: 1px solid #D5D3C9;
+  border-radius: 3px;
+}
+
+.app ul li:last-child {
+  border-bottom: none;
+}
+
+.app ul li button {
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */
