@@ -81,7 +81,8 @@ footer {
 
 .container {
   width: 100%;
-  padding: 0 25vw;
+  padding-left: 25vw;
+  padding-right: 25vw;
 }
 
 .hero {
@@ -104,6 +105,15 @@ button {
     font-size: 1rem;
     vertical-align: bottom;
   }
+}
+
+button ~ button {
+  margin-top: .5rem;
+}
+
+button.btn-sm {
+  width: 2rem;
+  padding: .5rem;
 }
 
 button:hover {
@@ -156,13 +166,14 @@ button.delete:active{
 }
 
 .input-group {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   label {
     display: block;
     margin-bottom: .5rem;
   }
   input[type='text']{
     padding: .5rem 1rem;
+    margin-bottom: .5rem;
     border: 1px solid $border-color;
     border-radius: 3px;
     font-family: 'IBM Plex Mono', monospace;
@@ -172,21 +183,26 @@ button.delete:active{
 .app {
   flex: 1 0 auto;
   font-size: 16px;
-  padding-block: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   .controls {
     margin-bottom: 1rem;
   }
   ul {
     list-style-type: none;
     li {
-      padding: 1rem .5rem;
+      padding: 1rem 0;
       border-bottom: 1px solid $border-color;
       border-radius: 3px;
       display: grid;
-      grid-template-columns: 1fr 150px;
+      grid-template-columns: minmax(100px, 1fr) auto;
       align-items: center;
       label {
         font-weight: 600;
+        word-wrap: break-word;
+        &.txt-stroked {
+          text-decoration:line-through;
+        }
         input[type='checkbox'] {
           margin: 0;
           margin-right: .5rem;
@@ -198,16 +214,20 @@ button.delete:active{
         border-bottom: none;
       }
       button {
+        justify-self: end;
         margin-left: 1rem;
       }
     }
   }
 }
 
-
 //Responsive
 @media screen and (max-width: 768px) {
   .container {
-    padding: 0 20vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+  .hidden-sm {
+    display: none;
   }
 }

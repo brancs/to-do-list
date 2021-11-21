@@ -4,7 +4,7 @@ let toDos = []
 
 const toDo = (title) => {
   return {
-    index: Date.now().toString(),
+    index: `TODO${(Date.now())}`,
     title: title,
     doState: 'false'
   }
@@ -12,9 +12,12 @@ const toDo = (title) => {
 
 const changeDoState = (index) => {
   let indexOfToDoToChange = toDos.findIndex(toDo => toDo.index == index)
-  let toDoDoState = toDos[indexOfToDoToChange].doState
-  toDos[indexOfToDoToChange].doState = toDoDoState === 'true' ? 'false' : 'true'
+  let newToDoState = toDos[indexOfToDoToChange].doState === 'true' ? 'false' : 'true'
+  let toDoElement = document.getElementById(index)
+  toDos[indexOfToDoToChange].doState = newToDoState
+  toDoElement.setAttribute('checked', newToDoState)
   saveActualToDoList()
+  displayToDoList()
 }
 
 const removeToDoFromListByIndex = (index) => {
@@ -39,6 +42,9 @@ const createToDoElement = (index, title, doState) => {
   inputToDo.setAttribute('type', 'checkbox')
   if (doState==='true'){
     inputToDo.setAttribute('checked', 'true')
+    labelToDo.setAttribute('class', 'txt-stroked')
+  } else {
+    labelToDo.setAttribute('class', '')
   }
   inputToDo.setAttribute('onchange', `changeDoState('${indexString}')`)
 
@@ -48,8 +54,9 @@ const createToDoElement = (index, title, doState) => {
 
   btnRemoveToDo.setAttribute('type', 'button')
   btnRemoveToDo.setAttribute('class', 'delete')
+  btnRemoveToDo.classList.add('btn-sm')
   btnRemoveToDo.setAttribute('onclick', `removeToDoFromListByIndex('${indexString}')`)
-  btnRemoveToDo.innerHTML = 'Remove <span class="icon material-icons">delete</span>'
+  btnRemoveToDo.innerHTML = '<span class="icon material-icons">delete</span>'
 
   liToDo.appendChild(labelToDo)
   liToDo.appendChild(btnRemoveToDo)
