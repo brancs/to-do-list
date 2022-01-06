@@ -1,4 +1,4 @@
-# To-do list
+# Todo list
 
 You can add whatever you want to do in your list!
 
